@@ -1,5 +1,7 @@
 {
     "name": "prestaflow/prestashop",
+    "description": "PrestaFlow example",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Shop\\": "src/"
