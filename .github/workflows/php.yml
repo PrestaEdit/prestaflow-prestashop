@@ -42,5 +42,8 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
+    - name: Autoload
+      run: composer dump-autoload --dev
+
     - name: Run test suite
       run: composer run prestaflow:tests
