@@ -4,13 +4,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Shop\\": "src/",
-            "Tests\\": "tests/"
+            "Shop\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "Tests/"
         }
     },
     "scripts": {
