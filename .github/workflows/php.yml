@@ -32,7 +32,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --dev
+      run: composer install --prefer-dist --no-progress --dev -o
 
     - name: Run test suite
       run: composer run prestaflow:tests
