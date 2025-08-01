@@ -1,0 +1,30 @@
+{
+    "name": "prestaflow/prestashop",
+    "autoload": {
+        "psr-4": {
+            "Shop\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "prestaflow:base": "./vendor/prestaflow/php-library/bin/prestaflow run",
+        "prestaflow:tests": "@prestaflow:base ./Tests",
+        "prestaflow:tests:json-1": "@prestaflow:base -o=JSON ./Tests",
+        "prestaflow:tests:json": "./vendor/prestaflow/php-library/bin/prestaflow run --output=JSON ./Tests"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "platform-check": false
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "prestaflow/php-library": "^1.0"
+    }
+}
