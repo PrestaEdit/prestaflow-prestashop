@@ -42,8 +42,12 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
-    - name: Autoload
-      run: composer dump-autoload --dev
+    - name: Make envfile
+      uses: SpicyPizza/create-envfile@v2.0
+      with:
+        envkey_PRESTAFLOW_PS_VERSION: "9.0.0"
+        envkey_PRESTAFLOW_LOCALE: "fr"
+        file_name: .env
 
     - name: Run test suite
       run: composer run prestaflow:tests
