@@ -9,6 +9,9 @@ use Shop\Tests\Scenarios\ModuleCustom;
 
 class Scenarios extends TestsSuite
 {
+    public $draft = true;
+    public $groups = 'scenarios';
+
     public function init()
     {
         $this
