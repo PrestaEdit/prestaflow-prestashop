@@ -50,4 +50,4 @@ jobs:
         file_name: .env
 
     - name: Run test suite
-      run: composer run prestaflow:base
+      run: composer run prestaflow:tests
