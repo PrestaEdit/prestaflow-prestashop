@@ -579,16 +579,16 @@
         },
         {
             "name": "prestaflow/php-library",
-            "version": "v1.1.1",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PrestaFlow/php-library.git",
-                "reference": "a718a22abe8e0c30d3b803ad22a586fb49f8283b"
+                "reference": "75dfe7617b3cf43128f18ca0e60fb886b9d882b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PrestaFlow/php-library/zipball/a718a22abe8e0c30d3b803ad22a586fb49f8283b",
-                "reference": "a718a22abe8e0c30d3b803ad22a586fb49f8283b",
+                "url": "https://api.github.com/repos/PrestaFlow/php-library/zipball/75dfe7617b3cf43128f18ca0e60fb886b9d882b0",
+                "reference": "75dfe7617b3cf43128f18ca0e60fb886b9d882b0",
                 "shasum": ""
             },
             "require": {
@@ -619,7 +619,7 @@
             "description": "PrestaFlow is an open-source set of prebuilt tests components, ready-to-use examples made for the PrestaShop E-commerce software.",
             "support": {
                 "issues": "https://github.com/PrestaFlow/php-library/issues",
-                "source": "https://github.com/PrestaFlow/php-library/tree/v1.1.1"
+                "source": "https://github.com/PrestaFlow/php-library/tree/v1.1.2"
             },
             "funding": [
                 {
@@ -631,7 +631,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-20T15:16:04+00:00"
+            "time": "2025-08-20T15:31:02+00:00"
         },
         {
             "name": "psr/container",
