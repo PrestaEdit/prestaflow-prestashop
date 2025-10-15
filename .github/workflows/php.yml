@@ -176,4 +176,10 @@ jobs:
         file_name: .env
 
     - name: Run test suite
-      run: composer run prestaflow:base -- --output="JSON"
+      run: composer run prestaflow:json:file
+
+    - name: Upload PrestaFlow artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: prestaflow-results
+        path: prestaflow
