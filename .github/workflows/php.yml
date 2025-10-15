@@ -51,7 +51,7 @@ jobs:
         file_name: .env
 
     - name: Run test suite
-      run: composer run prestaflow:tests
+      run: composer run prestaflow:default
 
   drafts:
 
