@@ -583,12 +583,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PrestaFlow/php-library.git",
-                "reference": "daa045929f4c807e276c9f265f1a14c0fd2fa3a3"
+                "reference": "c36e537c8e20b1cf17ce5799f9f5f0e2ebdd944e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PrestaFlow/php-library/zipball/daa045929f4c807e276c9f265f1a14c0fd2fa3a3",
-                "reference": "daa045929f4c807e276c9f265f1a14c0fd2fa3a3",
+                "url": "https://api.github.com/repos/PrestaFlow/php-library/zipball/c36e537c8e20b1cf17ce5799f9f5f0e2ebdd944e",
+                "reference": "c36e537c8e20b1cf17ce5799f9f5f0e2ebdd944e",
                 "shasum": ""
             },
             "require": {
@@ -631,7 +631,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-15T20:54:19+00:00"
+            "time": "2025-10-16T05:20:58+00:00"
         },
         {
             "name": "psr/container",
