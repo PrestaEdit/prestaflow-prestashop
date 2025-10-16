@@ -16,7 +16,7 @@
         "prestaflow:base": "./vendor/prestaflow/php-library/bin/prestaflow run",
         "prestaflow:default": "@prestaflow:base ./Tests",
         "prestaflow:json": "./vendor/prestaflow/php-library/bin/prestaflow run --output=JSON ./Tests",
-        "prestaflow:json:file": "./vendor/prestaflow/php-library/bin/prestaflow run --output=JSON ./Tests -f prestaflow/results.json"
+        "prestaflow:json:file": "./vendor/prestaflow/php-library/bin/prestaflow run --output=JSON ./Tests --file"
     },
     "config": {
         "optimize-autoloader": true,
