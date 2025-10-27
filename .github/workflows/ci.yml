@@ -57,4 +57,4 @@ jobs:
       with:
           token: PRESTAFLOW_SECRET_KEY
           project_id: 1000
-          file_path: ./prestaflow
+          file_path: ./prestaflow/results.json
