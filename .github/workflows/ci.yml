@@ -1,4 +1,4 @@
-name: PrestaFlow
+name: "Github Action"
 
 on:
   push:
