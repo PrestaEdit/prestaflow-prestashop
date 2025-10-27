@@ -53,7 +53,7 @@ jobs:
       run: composer run prestaflow:json:file
 
     - name: PrestaFlow
-      uses: prestaflow/github-action@dev
+      uses: prestaflow/github-action@main
       env:
           PRESTAFLOW_SECRET_KEY: PRESTAFLOW_SECRET_KEY
       with:
