@@ -54,7 +54,7 @@ jobs:
 
     - name: PrestaFlow
       uses: PrestaFlow/github-action@main
-      env:
-          PRESTAFLOW_SECRET_KEY: PRESTAFLOW_SECRET_KEY
       with:
-          prestaflow_account_id: YourAccountId
+          token: PRESTAFLOW_SECRET_KEY
+          project_id: PRESTAFLOW_PROJECT_ID
+          file_path: ./prestaflow
