@@ -1,0 +1,60 @@
+name: PrestaFlow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  json:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - run: |
+          git config --global --add safe.directory /app
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        extensions: gd
+        tools: composer:v2
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v3
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress
+
+    - name: Make envfile
+      uses: SpicyPizza/create-envfile@v2.0
+      with:
+        envkey_PRESTAFLOW_PS_VERSION: "9.0.0"
+        envkey_PRESTAFLOW_LOCALE: "fr"
+        file_name: .env
+
+    - name: Run test suite
+      run: composer run prestaflow:json:file
+
+    - name: PrestaFlow
+      uses: prestaflow/github-action@dev
+      env:
+          PRESTAFLOW_SECRET_KEY: PRESTAFLOW_SECRET_KEY
+      with:
+          prestaflow_account_id: YourAccountId
