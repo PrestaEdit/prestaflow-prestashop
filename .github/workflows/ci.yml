@@ -49,12 +49,8 @@ jobs:
         envkey_PRESTAFLOW_LOCALE: "fr"
         file_name: .env
 
-    - name: Run test suite
-      run: composer run prestaflow:json:file
-
     - name: PrestaFlow
       uses: PrestaFlow/github-action@main
       with:
           token: PRESTAFLOW_SECRET_KEY
           project_id: 1000
-          file_path: ./prestaflow/results.json
