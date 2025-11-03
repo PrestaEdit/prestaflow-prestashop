@@ -42,11 +42,19 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
+    # Create the test environment file from Actions Secrets
+    # You don't have to cat out your secrets file, but if you do it will just show as *** in the logs. It basically just confirms it actually exists.
+    - name: Echo secrets
+      run: |
+        echo $ENV_FILE >> .env
+        cat .env
+      shell: bash
+      env:
+        # Feel free to rename this variable, but make sure to update it everywhere. You should paste your entire file in your secrets
+        ENV_FILE : ${{secrets.ENV_FILE}}
+
     - name: PrestaFlow
       uses: PrestaFlow/github-action@main
-      env:
-        PRESTAFLOW_PS_VERSION: "9.0.0"
-        PRESTAFLOW_LOCALE: "fr"
       with:
           token: ${{ secrets.PRESTAFLOW_TOKEN }}
           projectId: "IhnxnAdhj6KaeXM9fzhqayOy96H0ITiY"
