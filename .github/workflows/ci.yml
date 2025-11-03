@@ -42,15 +42,11 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
-    - name: Make envfile
-      uses: SpicyPizza/create-envfile@v2.0
-      with:
-        envkey_PRESTAFLOW_PS_VERSION: "9.0.0"
-        envkey_PRESTAFLOW_LOCALE: "fr"
-        file_name: .env
-
     - name: PrestaFlow
       uses: PrestaFlow/github-action@main
+      env:
+        PRESTAFLOW_PS_VERSION: "9.0.0"
+        PRESTAFLOW_LOCALE: "fr"
       with:
           token: ${{ secrets.PRESTAFLOW_TOKEN }}
           projectId: "IhnxnAdhj6KaeXM9fzhqayOy96H0ITiY"
