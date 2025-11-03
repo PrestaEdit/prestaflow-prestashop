@@ -52,5 +52,5 @@ jobs:
     - name: PrestaFlow
       uses: PrestaFlow/github-action@main
       with:
-          token: PRESTAFLOW_SECRET_KEY
-          project_id: 1000
+          token: ${{ secrets.PRESTAFLOW_TOKEN }}
+          projectId: "IhnxnAdhj6KaeXM9fzhqayOy96H0ITiY"
